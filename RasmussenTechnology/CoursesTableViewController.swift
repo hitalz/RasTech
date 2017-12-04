@@ -2,7 +2,7 @@
 //  CoursesTableViewController.swift
 //  RasmussenTechnology
 //
-//  Created by Hector Torres on 11/22/17.
+//  Created by Hector Torres.
 //  Copyright © 2017 Hector Torres. All rights reserved.
 //
 
