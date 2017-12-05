@@ -11,10 +11,13 @@ import UIKit
 class CoursesTableViewController: UITableViewController {
     
     var degrees = Degree.getDegrees()
-    var index = 1
+    var index = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Disable large titles for this specific view controller
+        navigationItem.largeTitleDisplayMode = .never
 
     }
 

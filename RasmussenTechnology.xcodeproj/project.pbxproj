@@ -16,6 +16,7 @@
 		5A58A65A1FC4C96C00D74105 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A58A6581FC4C96C00D74105 /* Main.storyboard */; };
 		5A58A65C1FC4C96C00D74105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A58A65B1FC4C96C00D74105 /* Assets.xcassets */; };
 		5A58A65F1FC4C96C00D74105 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A58A65D1FC4C96C00D74105 /* LaunchScreen.storyboard */; };
+		5A6F654D1FD72A9C00AF01E2 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F654C1FD72A9C00AF01E2 /* ResourcesViewController.swift */; };
 		5AE7522D1FC62819006FBC89 /* CourseCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7522C1FC62819006FBC89 /* CourseCatalog.swift */; };
 		5AE752311FC63F4C006FBC89 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE752301FC63F4C006FBC89 /* CoursesTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		5A58A65B1FC4C96C00D74105 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A58A65E1FC4C96C00D74105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A58A6601FC4C96C00D74105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A6F654C1FD72A9C00AF01E2 /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
 		5AE7522C1FC62819006FBC89 /* CourseCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCatalog.swift; sourceTree = "<group>"; };
 		5AE752301FC63F4C006FBC89 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,16 +68,17 @@
 		5A58A6531FC4C96C00D74105 /* RasmussenTechnology */ = {
 			isa = PBXGroup;
 			children = (
+				5AE7522F1FC63522006FBC89 /* Model */,
 				5A58A6541FC4C96C00D74105 /* AppDelegate.swift */,
 				5A58A6561FC4C96C00D74105 /* ViewController.swift */,
 				5A34F2371FC4CB7200368ECF /* DegreesTableViewController.swift */,
 				5A34F2391FC4D2F300368ECF /* DegreeDatailsViewController.swift */,
+				5AE752301FC63F4C006FBC89 /* CoursesTableViewController.swift */,
 				5A58A6581FC4C96C00D74105 /* Main.storyboard */,
+				5A6F654C1FD72A9C00AF01E2 /* ResourcesViewController.swift */,
 				5A58A65B1FC4C96C00D74105 /* Assets.xcassets */,
 				5A58A65D1FC4C96C00D74105 /* LaunchScreen.storyboard */,
 				5A58A6601FC4C96C00D74105 /* Info.plist */,
-				5AE7522F1FC63522006FBC89 /* Model */,
-				5AE752301FC63F4C006FBC89 /* CoursesTableViewController.swift */,
 			);
 			path = RasmussenTechnology;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				5AE7522D1FC62819006FBC89 /* CourseCatalog.swift in Sources */,
 				5AE752311FC63F4C006FBC89 /* CoursesTableViewController.swift in Sources */,
 				5A34F23C1FC5E30300368ECF /* Course.swift in Sources */,
+				5A6F654D1FD72A9C00AF01E2 /* ResourcesViewController.swift in Sources */,
 				5A58A6551FC4C96C00D74105 /* AppDelegate.swift in Sources */,
 				5A34F23A1FC4D2F300368ECF /* DegreeDatailsViewController.swift in Sources */,
 			);

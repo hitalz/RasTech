@@ -8,9 +8,11 @@
 
 import UIKit
 
-class DegreeDatailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DegreeDatailsViewController: UIViewController{
 
+    @IBOutlet weak var degreeCareerOpportunities: UILabel!
     @IBOutlet weak var degreeDescription: UILabel!
+    @IBOutlet weak var degreeDetailsScrollView: UIScrollView!
     
     var degrees = Degree.getDegrees()
     var index = 0
@@ -18,46 +20,34 @@ class DegreeDatailsViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Set title name to the name of the degree selected
         let titleName = degrees[index].degreeName
         self.navigationItem.title = titleName
-        degreeDescription.text = degrees[index].degreeDescription
         
-    
+        //Load degree details
+        degreeDetails()
+        
+        //Disable large titles for this specific view controller
+        navigationItem.largeTitleDisplayMode = .never
+        
+        degreeDetailsScrollView.layer.cornerRadius = 10
+        
     }
     
-    //MARK: Table
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let courses = degrees[index].degreeCourses
-        return courses.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CourseCell", for: indexPath)
+    //MARK: - Degree Details
+    func degreeDetails() {
+        degreeCareerOpportunities.text = degrees[index].degreeCareerOpportunities
+        degreeCareerOpportunities.sizeToFit()
+        degreeDescription.text = degrees[index].degreeObjective
+        degreeDescription.sizeToFit()
         
-        let courses = degrees[index].degreeCourses
-        
-        cell.textLabel?.text = courses[indexPath.row].courseName
-        
-        return cell
     }
     
     // MARK: - Navigation
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let index = tableView.indexPathForSelectedRow!.row
-        
-        performSegue(withIdentifier: "CoursesSegue", sender: index)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? CoursesTableViewController {
-            if let index = sender as? Int {
-                destination.index = index
-                destination.degrees = degrees
-                
-            }
+        if segue.destination is CoursesTableViewController {
+            let destination = segue.destination as? CoursesTableViewController
+            destination?.index = index
         }
     }
-
 }

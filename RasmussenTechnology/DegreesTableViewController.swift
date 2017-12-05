@@ -2,6 +2,7 @@
 //  DegreesTableViewController.swift
 //  RasmussenTechnology
 //
+//  Created by Hector Torres.
 //  Copyright © 2017 Hector Torres. All rights reserved.
 //
 
@@ -13,11 +14,16 @@ class DegreesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupNavBar()
+    }
 
+    //MARK: - Navigation Bar
+    func setupNavBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
